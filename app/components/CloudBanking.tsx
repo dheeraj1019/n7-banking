@@ -24,60 +24,23 @@ export default function CloudBanking() {
     <>
       <section
         style={{
-          width: "100%",
-          minHeight: "100vh",
+          width: "1440px",
+          height: "619px",
           background: "rgba(0, 13, 18, 1)",
           position: "relative",
           overflow: "hidden",
         }}
       >
-
-        <div
-          style={{
-            position: "absolute",
-            top: "-2.25px",
-            left: "-163.31px",
-            width: "1141px",
-            height: "687px",
-            opacity: 0.5,
-            pointerEvents: "none",
-            userSelect: "none",
-            zIndex: 0,
-          }}
-        >
-          <svg width="1141" height="687" viewBox="0 0 1141 687">
-            <defs>
-              <linearGradient id="strokeGrad" x1="-5.68%" y1="0%" x2="86.98%" y2="0%">
-                <stop offset="0%" stopColor="rgba(0,180,253,0.5)" />
-                <stop offset="100%" stopColor="rgba(0,58,206,0.5)" />
-              </linearGradient>
-            </defs>
-            <text
-              x="0"
-              y="572"
-              fontFamily="Archivo"
-              fontWeight="500"
-              fontSize="572.63"
-              fill="none"
-              stroke="url(#strokeGrad)"
-              strokeWidth="1.59"
-            >
-              CB7
-            </text>
-          </svg>
-        </div>
-
         {/* LEFT SIDE — absolute positioned */}
         <div
           style={{
             position: "absolute",
-            top: "50%",
-            left: "40px",
-            transform: "translateY(-50%)",
+            top: "156.88px",
+            left: "80px",
             display: "flex",
             flexDirection: "column",
-            gap: "28px",
-            maxWidth: "480px",
+            gap: "16px",
+            maxWidth: "607.8348999023438px",
             zIndex: 2,
           }}
         >
@@ -148,36 +111,35 @@ export default function CloudBanking() {
           </button>
           {/* Learn More */}
 
-        <a href="#" className="link-blue">
-  
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      gap: "5px",
-    }}
-  >
-    <span
-      style={{
-        fontFamily: '"Chivo Mono Medium", monospace',
-        fontWeight: 400,
-        fontSize: "14px",
-        lineHeight: "130%",
-        textTransform: "uppercase",
-        color: "rgba(0, 180, 253, 1)",
-      }}
-    >
-      Learn More
-    </span>
+          <a href="#" className="link-blue">
 
-    <ArrowRight size={12} color="rgba(0, 180, 253, 1)" />
-  </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "5px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: '"Chivo Mono Medium", monospace',
+                  fontWeight: 400,
+                  fontSize: "14px",
+                  lineHeight: "130%",
+                  textTransform: "uppercase",
+                  color: "rgba(0, 180, 253, 1)",
+                }}
+              >
+                Learn More
+              </span>
 
-  {/* Animated Line */}
-  <div className="hoverLine" />
-</a>
+              <ArrowRight size={12} color="rgba(0, 180, 253, 1)" />
+            </div>
+
+            {/* Animated Line */}
+            <div className="hoverLine" />
+          </a>
         </div>
-
         {/* RIGHT SIDE — dashboard card, absolute, overflows right edge */}
         <div
           style={{
@@ -186,6 +148,7 @@ export default function CloudBanking() {
             right: "0",
             left: "927px",
             width: "651.67px",
+            height: 461,
             zIndex: 2,
           }}
         >
@@ -228,7 +191,7 @@ export default function CloudBanking() {
                 left: "0",
                 width: "631.15px",
                 height: "408.8px",
-                background: "rgba(217, 217, 217, 1)",
+                //  background: "rgba(217, 217, 217, 1)",
                 borderTopLeftRadius: "5.26px",
                 borderTopRightRadius: "5.26px",
                 opacity: 0.15,
@@ -254,6 +217,80 @@ export default function CloudBanking() {
             }}
           />
         </div>
+        {/* CB7 */}
+      <div
+  style={{
+    width: "1141px",
+    height: "687px",
+    transform: "rotate(0deg)",
+    opacity: 0.5,
+    position: "absolute",
+    top: "-2.25px",
+    left: "-163.31px",
+  }}
+>
+  <svg width="1141" height="687" viewBox="0 0 1141 687">
+    <defs>
+      <linearGradient
+        id="strokeGrad"
+        x1="0%"
+        y1="105.68%"
+        x2="100%"
+        y2="-6.98%"
+        gradientUnits="objectBoundingBox"
+      >
+        <stop offset="0%" stopColor="rgba(0,180,253,0.5)" />
+        <stop offset="100%" stopColor="rgba(0,58,206,0.5)" />
+      </linearGradient>
+
+      <linearGradient
+        id="fadeGrad"
+        x1="0%"
+        y1="0%"
+        x2="0%"
+        y2="100%"
+      >
+        <stop offset="0%" stopColor="transparent" />
+        <stop offset="100%" stopColor="black" />
+      </linearGradient>
+    </defs>
+
+    <rect
+      x="0.795"
+      y="0.795"
+      width="1139.41"
+      height="685.41"
+      fill="none"
+      stroke="url(#strokeGrad)"
+      strokeWidth="1.59"
+    />
+
+    <text
+      x="0"
+      y="574"
+      fontFamily="Archivo"
+      fontWeight="500"
+      fontSize="572.63"
+      fill="none"
+      stroke="url(#strokeGrad)"
+      strokeWidth="1.59"
+    >
+      CB7
+    </text>
+
+    {/* gradient overlay on top of everything */}
+    <rect
+      x="0"
+      y="0"
+      width="1141"
+      height="687"
+      fill="url(#fadeGrad)"
+    />
+  </svg>
+</div>
+
+
+
       </section>
 
       {/* SECTION 2 — unchanged */}
