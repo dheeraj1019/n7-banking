@@ -3,148 +3,187 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handler);
-    return () => window.removeEventListener("scroll", handler);
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
   }, []);
 
   return (
-    <nav
-      style={{
-        position: "fixed",
-        top: "31px",
-        left: "50%",
-        transform: "translateX(-50%)",
-
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-
-        padding: "9px 10px",
-        gap: "160px",
-
-        borderRadius: "12px",
-
-        background: "rgba(47,47,47,0.7)",
-        backdropFilter: "blur(15px)",
-
-        width: "fit-content",
-        minHeight: "47px",
-
-        zIndex: 100,
-      }}
-    >
-
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <div style={{
-          width: "32px",
-          height: "29px",
-          borderRadius: "8px",
-          fontFamily: "Archivo",
-          fontWeight: 500,
-          fontStyle: "normal",
-          fontSize: "24px",
-          lineHeight: "120%",
-          letterSpacing: "0%",
-          color: "background: rgba(233, 244, 249, 1)"
-        }}>N7</div>
-      </div>
-
-      {/* Desktop Nav */}
-      <div
-        className="hidden md:flex"
+    <>
+      <nav
         style={{
-          width: "263.46px",
-          height: "16px",
-          gap: "20px",
+          position: "fixed",
+          top: isMobile ? "12px" : "31px",
+          left: "50%",
+          transform: "translateX(-50%)",
           display: "flex",
           alignItems: "center",
+          justifyContent: "space-between",
+          padding: isMobile ? "9px 16px" : "9px 10px",
+          gap: isMobile ? "0px" : "160px",
+          borderRadius: "12px",
+          background: "rgba(47,47,47,0.7)",
+          backdropFilter: "blur(15px)",
+          WebkitBackdropFilter: "blur(15px)",
+          width: isMobile ? "calc(100vw - 32px)" : "fit-content",
+          minHeight: "47px",
+          zIndex: 100,
+          boxSizing: "border-box",
         }}
       >
-        {["Solutions", "Resources", "About us"].map((item) => (
-          <a
-            key={item}
-            href="#"
-            className="nav-link"
+        {/* Logo */}
+        <div
+          style={{
+            fontFamily: "Archivo, sans-serif",
+            fontWeight: 500,
+            fontSize: "24px",
+            lineHeight: "120%",
+            color: "rgba(233, 244, 249, 1)",
+            userSelect: "none",
+          }}
+        >
+          N7
+        </div>
+
+        {/* Desktop Nav Links */}
+        {!isMobile && (
+          <div
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "4px",
-
-              fontFamily: "Chivo Mono",
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "130%",
-              textTransform: "uppercase",
-               whiteSpace: "nowrap",
-              color: "rgba(233, 244, 249, 1)",
-              textDecoration: "none",
+              gap: "20px",
             }}
           >
-            {item}
+            {["Solutions", "Resources", "About us"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "4px",
+                  fontFamily: "'Chivo Mono', monospace",
+                  fontWeight: 400,
+                  fontSize: "12px",
+                  lineHeight: "130%",
+                  textTransform: "uppercase",
+                  whiteSpace: "nowrap",
+                  color: "rgba(233, 244, 249, 1)",
+                  textDecoration: "none",
+                  transition: "opacity 0.2s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+              >
+                {item}
+                <ChevronDown size={14} strokeWidth={1.4} style={{ color: "rgba(233, 244, 249, 1)" }} />
+              </a>
+            ))}
+          </div>
+        )}
 
-            <ChevronDown
-              size={20}
-              strokeWidth={1.14}
+        {/* Desktop CTA */}
+        {!isMobile && (
+          <button className="navbarButton">
+            Request Demo
+          </button>
+        )}
+
+        {/* Mobile Hamburger */}
+        {isMobile && (
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            style={{
+              background: "none",
+              border: "none",
+              color: "rgba(233, 244, 249, 1)",
+              cursor: "pointer",
+              padding: "4px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        )}
+      </nav>
+
+      {/* Mobile Dropdown Menu */}
+      {isMobile && (
+        <div
+          style={{
+            position: "fixed",
+            top: menuOpen ? "72px" : "-300px",
+            left: "16px",
+            right: "16px",
+            background: "rgba(30, 30, 30, 0.97)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            borderRadius: "12px",
+            padding: menuOpen ? "24px" : "0 24px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
+            zIndex: 99,
+            overflow: "hidden",
+            maxHeight: menuOpen ? "400px" : "0px",
+            opacity: menuOpen ? 1 : 0,
+            transition: "top 0.3s ease, max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease",
+            border: "1px solid rgba(255,255,255,0.08)",
+          }}
+        >
+          {["Solutions", "Resources", "About us"].map((item) => (
+            <a
+              key={item}
+              href="#"
               style={{
-                color: "border: 1.14px solid rgba(233, 244, 249, 1)",
-                transform: "rotate(0deg)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                fontFamily: "'Chivo Mono', monospace",
+                fontWeight: 400,
+                fontSize: "14px",
+                textTransform: "uppercase",
+                color: "rgba(233, 244, 249, 1)",
+                textDecoration: "none",
+                paddingBottom: "16px",
+                borderBottom: "1px solid rgba(255,255,255,0.08)",
               }}
-            />
-          </a>
-        ))}
-      </div>
-
-      {/* CTA */}
-     <div
-  className="hidden md:flex"
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "20px",
-
-    width: "fit-content",
-    height: "fit-content",
-
-    opacity: 1,
-  }}
->
-  <button
-    
-   className="navbarButton"
-  >
-    Request Demo
-  </button>
-</div>
-
-      {/* Mobile toggle */}
-      <button
-        className="md:hidden"
-        onClick={() => setMenuOpen(!menuOpen)}
-        style={{ background: "none", border: "none", color: "white", cursor: "pointer" }}
-      >
-        {menuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div style={{
-          position: "absolute", top: "64px", left: 0, right: 0,
-          background: "rgba(10,14,26,0.98)", padding: "24px",
-          display: "flex", flexDirection: "column", gap: "20px",
-          borderBottom: "1px solid rgba(255,255,255,0.08)"
-        }}>
-          {["Solutions", "Products", "Resources", "Company"].map((item) => (
-            <a key={item} href="#" className="nav-link" style={{ fontSize: "16px" }}>{item}</a>
+            >
+              {item}
+              <ChevronDown size={16} strokeWidth={1.4} style={{ color: "rgba(233, 244, 249, 0.6)" }} />
+            </a>
           ))}
-          <button className="btn-primary" style={{ width: "100%", justifyContent: "center" }}>Request Demo</button>
-          <button className="btn-outline" style={{ width: "100%", justifyContent: "center" }}>Contact Us</button>
+
+          <button
+            className="navbarButton"
+            style={{ width: "100%", justifyContent: "center" }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Request Demo
+          </button>
         </div>
       )}
-    </nav>
+
+      {/* Mobile backdrop */}
+      {isMobile && menuOpen && (
+        <div
+          onClick={() => setMenuOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 98,
+            background: "rgba(0,0,0,0.3)",
+          }}
+        />
+      )}
+    </>
   );
 }

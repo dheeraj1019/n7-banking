@@ -87,9 +87,7 @@ export default function CTA({ light }: CTABannerProps) {
           <button
           className="requestDemo"
           >
-           
               Request Demo
-
           </button>
         </div>
 </section>

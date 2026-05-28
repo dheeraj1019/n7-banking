@@ -149,7 +149,7 @@ export default function CloudBanking() {
           {/* Learn More */}
 
         <a href="#" className="link-blue">
-  {/* Text + Icon */}
+  
   <div
     style={{
       display: "flex",
