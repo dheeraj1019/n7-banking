@@ -6,10 +6,9 @@ import "./csss/button-primary.css"
 import iphone13 from "../assests/iphone13.png";
 import iphone13pro from "../assests/iphone13_pro.png";
 import iphone13max from "../assests/Iphone13_max.png";
-import CTABanner from "./CTABanner";
 import Ticker from "./Ticker";
 import ComplianceSection from "./ComplianceSection";
-import { useState } from "react";
+import vector26 from "../assests/Vector (4).png"
 
 const GradientCheckIcon: React.FC = () => (
   <svg
@@ -38,14 +37,7 @@ const GradientCheckIcon: React.FC = () => (
     />
   </svg>
 );
-const listItemStyle = {
-  display: "flex",
-  alignItems: "center",
-  gap: "10px",
-  opacity: 0.8,
-  fontSize: "16px",
-  color: "#000D12",
-};
+
 const checkItems: string[] = [
   "Pre-integrated Security System",
   "Fully Compliant With Regulatory Requirement",
@@ -56,15 +48,12 @@ export default function DigitalBanking() {
   return (
     <section
       style={{
-        width: "100%",
-        height: "2700px",
+        width: "1440px",
+        height: "2763px",
         //padding: "100px 40px",
-        background: "rgba(233, 244, 249, 1)",
-        boxSizing: "border-box",
+        background: "rgba(255, 255, 255, 1)",
+        // boxSizing: "border-box",
         position: "relative",
-        display: "flex",
-        flexDirection: "column",
-        gap: "90px"
       }}
     >
       <Ticker />
@@ -72,18 +61,18 @@ export default function DigitalBanking() {
       <div
         style={{
           maxWidth: "1440px",
-
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-between",
-          gap: "80px",
+          minHeight: "2647px",
+          height: "fit-content",
           position: "relative",
+          background: "rgba(233, 244, 249, 1)",
+          overflow: "hidden"
         }}
       >
         {/* LEFT TEXT */}
-        <div style={{ width: "438px", display: "flex", flexDirection: "column", gap: "16px" }}>
+        <div style={{ position: "absolute", width: "438px", height: 308, top: 100, left: 81, display: "flex", flexDirection: "column", gap: "16px", zIndex: 2 }}>
           <h2
             style={{
+              fontFamily: "Archivo",
               fontSize: "53px",
               fontWeight: 400,
               lineHeight: "120%",
@@ -101,8 +90,8 @@ export default function DigitalBanking() {
           </p>
 
           <button
-          className="requestDemo"
-           
+            className="requestDemo"
+
           >
             Request Demo
           </button>
@@ -138,12 +127,21 @@ export default function DigitalBanking() {
         </div>
 
         {/* RIGHT SIDE */}
+
+
         <div
           style={{
-            width: "650px",
+            position: "absolute",
+            top: "100px",
+            left: "622px",
+
+            minWidth: "651.70556640625px",
+            width: "fit-content",
+            minHeight: "1848.7000732421875px",
             display: "flex",
             flexDirection: "column",
             gap: "110px",
+            zIndex: 2
           }}
         >
           {/* CARD 1 */}
@@ -252,94 +250,268 @@ export default function DigitalBanking() {
           {/* CARD 3 */}
           <ComplianceSection phoneImage={iphone13max} ></ComplianceSection>
         </div>
-      </div>
-
-      {/* CARD SECTION */}
-      <div
-        style={{
-          maxWidth: "1479px",
-          height: 427,
-          margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-around",
-          borderRadius: "27px",
-          background: "linear-gradient(99.21deg, #031E2A -12.22%, #000D12 59.26%)",
-          position: "relative",  // ← keeps card above CB7
-          zIndex: 1,
-          padding: "0 80px",
-        }}
-      >
-        {/* Left — text */}
+        {/* CARD SECTION */}
         <div
           style={{
-            width: "607px",
+            position: "absolute",
+            top: "2104.43px",
+            left: "81px",
+            minWidth: "1279px",
+            width: "auto",
+            height: 427,
+            margin: "0 auto",
             display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            gap: "32px",
-          }}
-        >
-          <h2
-            style={{
-              width: "1007.83px",
-              fontFamily: "Archivo",
-              fontWeight: 400,
-              fontSize: "53px",
-              lineHeight: "120%",
-              letterSpacing: "-0.01em",
-              color: "rgba(233, 244, 249, 1)",
-              margin: 0,
-              textAlign: "left",
-            }}
-          >
-            Take the full advantage of<br /> going paper-less now.
-          </h2>
-
-          <p
-            style={{
-              width: "462.92px",
-              fontFamily: "Archivo",
-              fontWeight: 400,
-              fontSize: "16px",
-              lineHeight: "130%",
-              letterSpacing: "0%",
-              color: "rgba(233, 244, 249, 1)",
-              opacity: 0.8,
-              margin: 0,
-              textAlign: "left",
-            }}
-          >
-            CB7 helps your financial institution improve the client experience, automate
-            and optimize procedures, simplify banking operations
-          </p>
-        </div>
-
-        {/* Right — buttons */}
-        <div
-          style={{
-            display: "flex",
-            gap: "40px",
             alignItems: "center",
+            justifyContent: "space-around",
+            borderRadius: "27px",
+            background: "linear-gradient(99.21deg, #031E2A -12.22%, #000D12 59.26%)",
+            zIndex: 1,
+
           }}
         >
-          {/* Contact Us */}
-          <button
-           className="contactButton"
+          {/* Left — text */}
+          <div
+            style={{
+              width: "607px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: "32px",
+            }}
           >
-           
-              Contact Us
-            
-          </button>
+            <h2
+              style={{
+                width: "1007.83px",
+                fontFamily: "Archivo",
+                fontWeight: 400,
+                fontSize: "53px",
+                lineHeight: "120%",
+                letterSpacing: "-0.01em",
+                color: "rgba(233, 244, 249, 1)",
+                margin: 0,
+                textAlign: "left",
+              }}
+            >
+              Take the full advantage of<br /> going paper-less now.
+            </h2>
 
-          {/* Request Demo */}
-          <button
-           className="requestDemo"
+            <p
+              style={{
+                width: "462.92px",
+                fontFamily: "Archivo",
+                fontWeight: 400,
+                fontSize: "16px",
+                lineHeight: "130%",
+                letterSpacing: "0%",
+                color: "rgba(233, 244, 249, 1)",
+                opacity: 0.8,
+                margin: 0,
+                textAlign: "left",
+              }}
+            >
+              CB7 helps your financial institution improve the client experience, automate
+              and optimize procedures, simplify banking operations
+            </p>
+          </div>
+
+          {/* Right — buttons */}
+          <div
+            style={{
+              display: "flex",
+              gap: "40px",
+              alignItems: "center",
+            }}
           >
+            {/* Contact Us */}
+            <button
+              className="contactButton"
+            >
+
+              Contact Us
+
+            </button>
+
+            {/* Request Demo */}
+            <button
+              className="requestDemo"
+            >
               Request Dem0
-          </button>
+            </button>
+          </div>
         </div>
+        {/* n7 */}
+        <div
+          style={{
+            width: "744px",
+            height: "687px",
+            transform: "rotate(0deg)",
+            opacity: 0.5,
+            position: "absolute",
+            top: "-66.74px",
+            left: "277px",
+          }}
+        >
+          <svg width="744" height="687" viewBox="0 0 744 687" >
+            <defs>
+              <linearGradient
+                id="strokeGradN7"
+                x1="0%"
+                y1="105.68%"
+                x2="100%"
+                y2="-6.98%"
+                gradientUnits="objectBoundingBox"
+              >
+                <stop offset="0%" stopColor="#f2f5f7" />
+                <stop offset="100%" stopColor="#003ACE" />
+              </linearGradient>
+
+              <linearGradient
+                id="fadeGradN7"
+                x1="0%"
+                y1="0%"
+                x2="0%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="transparent" />
+                <stop offset="100%" stopColor="black" />
+              </linearGradient>
+            </defs>
+            <text
+              x="0"
+              y="574"
+              fontFamily="Archivo"
+              fontWeight="500"
+              fontSize="572.63"
+              fill="none"
+              stroke="url(#strokeGradN7)"
+              strokeWidth="1.59"
+            >
+              N7
+            </text>
+          </svg>
+        </div>
+        {/* eclipse */}
+        <div
+          style={{
+            width: "778.742919921875px",
+            height: "778.742919921875px",
+            borderRadius: "50%",
+            background: "linear-gradient(103.43deg, #FDA700 -1.02%, #CE5700 83.53%)",
+            backdropFilter: "blur(100px)",
+            WebkitBackdropFilter: "blur(100px)",
+            filter: "blur(100px)",
+            opacity: 0.05,
+            position: "absolute",
+            top: "-91.57px",
+            left: "661.26px",
+            transform: "rotate(0deg)",
+            pointerEvents: "none",
+          }}
+          aria-hidden="true"
+        />
+         <div
+          style={{
+            width: "585.8502807617188px",
+            height: "585.8502807617188px",
+            borderRadius: "50%",
+            background: "linear-gradient(103.43deg, #FDA700 -1.02%, #CE5700 83.53%)",
+            backdropFilter: "blur(100px)",
+            WebkitBackdropFilter: "blur(100px)",
+            filter: "blur(100px)",
+            opacity: 0.02,
+            position: "absolute",
+            top: "-260.85px",
+            left: "-85.85px",
+            transform: "rotate(0deg)",
+            pointerEvents: "none",
+          }}
+          aria-hidden="true"
+        />
+        {/* 7*/}
+        <div
+          style={{
+            width: "861px",
+            height: "1829",
+            transform: "rotate(0deg)",
+            opacity: 0.5,
+            position: "absolute",
+            top: "957.28px",
+            left: "886.92px",
+          }}
+        >
+          <svg width="861" height="1829" viewBox="0 0 861 1829" >
+            <defs>
+              <linearGradient
+                id="strokeGradN7"
+                x1="0%"
+                y1="105.68%"
+                x2="100%"
+                y2="-6.98%"
+                gradientUnits="objectBoundingBox"
+              >
+                <stop offset="0%" stopColor="#f2f5f7" />
+                <stop offset="100%" stopColor="#003ACE" />
+              </linearGradient>
+
+              <linearGradient
+                id="fadeGradN7"
+                x1="0%"
+                y1="0%"
+                x2="0%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="transparent" />
+                <stop offset="100%" stopColor="black" />
+              </linearGradient>
+            </defs>
+            <text
+              x="0"
+              y="574"
+              fontFamily="Archivo"
+              fontWeight="500"
+              fontSize="1524.1px"
+              fill="none"
+              stroke="url(#strokeGradN7)"
+              strokeWidth="1.59"
+            >
+              7
+            </text>
+          </svg>
+        </div>
+
+         <div
+          style={{
+            width: "778.742919921875px",
+            height: "778.742919921875px",
+            borderRadius: "50%",
+           background: "linear-gradient(100.92deg, #00CFFD 35.49%, #0015CE 82.38%)",
+
+            //background: "linear-gradient(103.43deg, #FDA700 -1.02%, #CE5700 83.53%)",
+            backdropFilter: "blur(100px)",
+            WebkitBackdropFilter: "blur(100px)",
+            filter: "blur(100px)",
+            opacity: 0.1,
+            position: "absolute",
+            top: "1928.56px",
+            left: "-364.23px",
+            transform: "rotate(0deg)",
+            pointerEvents: "none",
+          }}
+          aria-hidden="true"
+        />
+        {/* added */}
+          <Image src={vector26} alt="vector" style={{
+            width:"1243.248779296875px",
+            height:"1245.2142333984375px",
+            top:"418.17px",
+            left:"-763.25px",
+            border:"1px",
+            opacity:0.2
+          }}/>
       </div>
+        
+         
+
     </section>
   );
 }
