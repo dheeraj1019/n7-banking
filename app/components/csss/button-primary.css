@@ -1,0 +1,193 @@
+.requestDemo {
+  width: 210px;
+  height: 49px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(
+    106.53deg,
+    #00b4fd -5.68%,
+    #003ace 86.98%
+  );
+
+  color: #ffffff;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.requestDemo:hover {
+  background: #ffffff;
+  color: #003ace;
+   transform: translateY(-2px);
+}
+
+.contactButton {
+  width: 208px;
+  height: 49px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(233, 244, 249, 1);
+
+  background: transparent;
+  cursor: pointer;
+
+  color: rgba(233, 244, 249, 1);
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background: rgba(233, 244, 249, 1);
+  color: #003ace;
+
+  transform: translateY(-2px);
+}
+.navbarButton {
+  width: fit-content;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 5px 37px;
+
+  border-radius: 6px;
+  border: 1px solid rgba(233, 244, 249, 1);
+
+  background: transparent;
+  color: #ffffff;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  cursor: pointer;
+  opacity: 1;
+
+  transition: all 0.3s ease;
+}
+
+.navbarButton:hover {
+  background: rgba(233, 244, 249, 1);
+  color: #003ace;
+
+  transform: translateY(-2px);
+}
+.secondary-button {
+  color: rgba(233, 244, 249, 1);
+    
+  transition: all 0.3s ease;
+}
+.secondaryButton {
+  width: 226px;
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 15px 59px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(233, 244, 249, 1);
+
+  background: transparent;
+  color: rgba(233, 244, 249, 1);
+
+  opacity: 1;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(233, 244, 249, 1);
+  color: #003ace;
+
+  transform: translateY(-2px);
+}
+.hoverLine{
+    width: 32.58px;
+  height: 0;
+  border: 1px solid rgba(0, 180, 253, 1);
+
+    transition: width 0.3s ease;
+}
+
+.hoverLine:hover {
+  width: 60px;
+}
+/* style={{
+                  width: "32.58px",
+                  height: "0px",
+                  opacity: 1,
+                  transform: "rotate(0deg)",
+                  border: "1px solid rgba(0, 180, 253, 1)",
+                }} */
+
+.link-blue {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-decoration: none;
+  width: fit-content;
+  align-items: flex-start;
+}
+
+.hoverLine {
+  width: 40px;
+  height: 1px;
+  background: rgba(0, 180, 253, 1);
+
+  transform: scaleX(1);
+  transform-origin: left;
+
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+/* Hover Effect */
+.link-blue:hover .hoverLine {
+  transform: scaleX(1.8);
+}
