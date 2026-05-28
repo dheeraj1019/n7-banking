@@ -65,7 +65,7 @@ export default function CTABanner({ light }: CTABannerProps) {
           justifyContent: "space-around",
           borderRadius: "27px",
           background: "linear-gradient(99.21deg, #031E2A -12.22%, #000D12 59.26%)",
-          position: "relative",  // ← keeps card above CB7
+          position: "relative", 
           zIndex: 1,
           padding: "0 80px",
         }}

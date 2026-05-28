@@ -6,17 +6,43 @@ import image from "../assests/preview.webp";
 import image4 from "../assests/image4.png"
 import "./csss/button-primary.css"
 const DASHBOARD_ROWS = [
-  { label: "Customer On-Boarding" },
-  { label: "Transaction management" },
-  { label: "Interest Calculation" },
-  { label: "Payment processing and more" },
+  "Customer On-Boarding",
+  "Transaction management",
+  "Interest Calculation",
+  "Payments processing (cash, cheques, mandates, NEFT, RTGS etc)",
 ];
-
+const GradientCheckIcon: React.FC = () => (
+  <svg
+    width="30"
+    height="32"
+    viewBox="0 0 30 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    style={{ flexShrink: 0 }}
+  >
+    <defs>
+      <linearGradient id="ellipseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#00B4FD" />
+        <stop offset="100%" stopColor="#003ACE" />
+      </linearGradient>
+    </defs>
+    <circle cx="14.88" cy="16" r="9.26" fill="url(#ellipseGrad)" />
+    <path
+      d="M11.5 15.8 L14.2 18.5 L18.8 13.5"
+      stroke="#E9F4F9"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  </svg>
+);
 const FEATURES_RIGHT = [
-  { label: "CRM Adminew" },
-  { label: "Retail Banking Products" },
-  { label: "Loan and financial tools" },
-  { label: "Reporting a plan for all" },
+  "CRM Adminew",
+  "Configuring New Banking Products",
+  "Loan disbursal and Loan management",
+  "Establishing criteria for minimum balances, interest rates, number of withdrawals allowed and so on.",
 ];
 
 export default function CloudBanking() {
@@ -218,254 +244,253 @@ export default function CloudBanking() {
           />
         </div>
         {/* CB7 */}
-      <div
-  style={{
-    width: "1141px",
-    height: "687px",
-    transform: "rotate(0deg)",
-    opacity: 0.5,
-    position: "absolute",
-    top: "-2.25px",
-    left: "-163.31px",
-  }}
->
-  <svg width="1141" height="687" viewBox="0 0 1141 687">
-    <defs>
-      <linearGradient
-        id="strokeGrad"
-        x1="0%"
-        y1="105.68%"
-        x2="100%"
-        y2="-6.98%"
-        gradientUnits="objectBoundingBox"
-      >
-        <stop offset="0%" stopColor="rgba(0,180,253,0.5)" />
-        <stop offset="100%" stopColor="rgba(0,58,206,0.5)" />
-      </linearGradient>
+        <div
+          style={{
+            width: "1141px",
+            height: "687px",
+            transform: "rotate(0deg)",
+            opacity: 0.5,
+            position: "absolute",
+            top: "-2.25px",
+            left: "-163.31px",
+          }}
+        >
+          <svg width="1141" height="687" viewBox="0 0 1141 687">
+            <defs>
+              <linearGradient
+                id="strokeGrad"
+                x1="0%"
+                y1="105.68%"
+                x2="100%"
+                y2="-6.98%"
+                gradientUnits="objectBoundingBox"
+              >
+                <stop offset="0%" stopColor="rgba(0,180,253,0.5)" />
+                <stop offset="100%" stopColor="rgba(0,58,206,0.5)" />
+              </linearGradient>
 
-      <linearGradient
-        id="fadeGrad"
-        x1="0%"
-        y1="0%"
-        x2="0%"
-        y2="100%"
-      >
-        <stop offset="0%" stopColor="transparent" />
-        <stop offset="100%" stopColor="black" />
-      </linearGradient>
-    </defs>
+              <linearGradient
+                id="fadeGrad"
+                x1="0%"
+                y1="0%"
+                x2="0%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="transparent" />
+                <stop offset="100%" stopColor="black" />
+              </linearGradient>
+            </defs>
 
-    <rect
-      x="0.795"
-      y="0.795"
-      width="1139.41"
-      height="685.41"
-      fill="none"
-      stroke="url(#strokeGrad)"
-      strokeWidth="1.59"
-    />
+            <rect
+              x="0.795"
+              y="0.795"
+              width="1139.41"
+              height="685.41"
+              fill="none"
+              stroke="url(#strokeGrad)"
+              strokeWidth="1.59"
+            />
 
-    <text
-      x="0"
-      y="574"
-      fontFamily="Archivo"
-      fontWeight="500"
-      fontSize="572.63"
-      fill="none"
-      stroke="url(#strokeGrad)"
-      strokeWidth="1.59"
-    >
-      CB7
-    </text>
+            <text
+              x="0"
+              y="574"
+              fontFamily="Archivo"
+              fontWeight="500"
+              fontSize="572.63"
+              fill="none"
+              stroke="url(#strokeGrad)"
+              strokeWidth="1.59"
+            >
+              CB7
+            </text>
 
-    {/* gradient overlay on top of everything */}
-    <rect
-      x="0"
-      y="0"
-      width="1141"
-      height="687"
-      fill="url(#fadeGrad)"
-    />
-  </svg>
-</div>
+            {/* gradient overlay on top of everything */}
+            <rect
+              x="0"
+              y="0"
+              width="1141"
+              height="687"
+              fill="url(#fadeGrad)"
+            />
+          </svg>
+        </div>
 
 
 
       </section>
 
       {/* SECTION 2 — unchanged */}
-      <section style={{ background: "#0a0e1a", padding: "100px 40px" }}>
-        <div
-          style={{
-            maxWidth: "1280px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "80px",
-            alignItems: "center",
-          }}
-        >
-          {/* LEFT — dashboard image */}
-          <div style={{ position: "relative" }}>
-            {/* Main bordered container */}
-            <div
+      <section style={{ position: "relative", width: "1440px", height: "681px", background: "rgba(0, 13, 18, 1)" }}>
+        {/* RIGHT — text content */}
+        <div style={{ position: "absolute", display: "flex", flexDirection: "column", width: 590, height: 350.40771484375, top: "168.68px", left: "770px", gap: "34px" }}>
+          <h2
+            style={{
+              fontFamily: "'Archivo', sans-serif",
+              fontWeight: 400,
+              fontSize: "27px",
+              lineHeight: "130%",
+              letterSpacing: "0%",
+              width: "495px",
+              height: "70px",
+              opacity: 1,
+              color: "rgba(233, 244, 249, 1)",
+              margin: 0,
+            }}
+          >
+            Run a more efficient, flexible and digitally connected core banking system
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", width: "fit-content", height: "fit-content", minWidth: "590px", minHeight: "246.41px", gap: "14px" }}>
+            <p
               style={{
-                width: "651.6660766601562px",
-                aspectRatio: "651.67 / 431.99",
-                left: "-159px",
-                borderTopLeftRadius: "15.77px",
-                borderTopRightRadius: "15.77px",
-                border: "1.05px solid transparent",
-                background:
-                  "linear-gradient(#02171F, #02171F) padding-box, linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%) border-box",
-                boxSizing: "border-box",
-                position: "relative",
-                overflow: "hidden",
+                fontFamily: "'Archivo', sans-serif",
+                fontWeight: 600,
+                fontSize: "16px",
+                lineHeight: "130%",
+                letterSpacing: "0%",
+                width: "129px",
+                height: "21px",
+                opacity: 1,
+                color: "rgba(233, 244, 249, 1)",
+                margin: 0,
+                whiteSpace: "nowrap",
               }}
             >
-              {/* Dashboard image */}
-              <Image
-                src={image4}
-                alt="AML Dashboard"
-                style={{
-                  position: "absolute",
-                  top: "7.57px",
-                  left: "-10.22px",
-                  width: "651.2000122070312px",
-                  height: "94%",
-                  opacity: 0.8,
-                  display: "block",
-                  borderTopRightRadius: "5.77px",
-                }}
-              />
+              What you will get:
+            </p>
+            <div style={{ minWidth: 590, minHeight: 211.41, width: "auto", height: "auto", display: "flex", gap: "29px" }}>
+              <div style={{ width: 296, height: 204.6309051513672, gap: "4px" }}>
+                {DASHBOARD_ROWS.map((item, i) => (
+                  <div
+                    key={item}
+                    style={{
+                      width: "296px",
 
-              {/* Overlay tint */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "0",
-                  left: "0",
-                  width: "100%",
-                  height: "95%",
-                  background: "rgba(217, 217, 217, 1)",
-                  borderTopLeftRadius: "5.26px",
-                  borderTopRightRadius: "5.26px",
-                  opacity: 0.15,
-                  pointerEvents: "none",
-                }}
-              />
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 5,
+                      opacity: 0.8,
+                      transform: "translateX(0)",
+                      transition: `opacity 0.5s ease ${0.3 + i * 0.1}s, transform 0.5s ease ${0.3 + i * 0.1}s`,
+                    }}
+                  >
+                    <GradientCheckIcon />
+                    <span
+                      style={{
+                        fontWeight: 400,
+                        fontSize: 14,
+                        color: "background: rgba(233, 244, 249, 1)",
+                        lineHeight: "130%",
+                      }}
+                    >
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div>
+                {FEATURES_RIGHT.map((item, i) => (
+                  <div
+                    key={item}
+                    style={{
+                      width: 296,
+
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 5,
+                      opacity: 0.8,
+                      transform: "translateX(0)",
+                      transition: `opacity 0.5s ease ${0.3 + i * 0.1}s, transform 0.5s ease ${0.3 + i * 0.1}s`,
+                    }}
+                  >
+                    <GradientCheckIcon />
+                    <span
+                      style={{
+                        fontWeight: 400,
+                        fontSize: 14,
+                        color: "background: rgba(233, 244, 249, 1)",
+                        lineHeight: "130%",
+                      }}
+                    >
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
 
-            {/* Bottom bar */}
+
+        </div>
+
+        {/* LEFT — dashboard image */}
+        <div style={{ width:651.6660766601562,height:461.421630859375,position: "relative", top:"110px" ,left:"-159px"}}>
+          {/* Main bordered container */}
+          <div
+            style={{
+              width: "651.6660766601562px",
+              aspectRatio: "651.67 / 431.99",
+              borderTopLeftRadius: "15.77px",
+              borderTopRightRadius: "15.77px",
+              border: "1.05px solid transparent",
+              background:
+                "linear-gradient(#02171F, #02171F) padding-box, linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%) border-box",
+              boxSizing: "border-box",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            {/* Dashboard image */}
+            <Image
+              src={image4}
+              alt="AML Dashboard"
+              style={{
+                position: "absolute",
+                top: "7.57px",
+                left: "-10.22px",
+                width: "651.2000122070312px",
+                height: "94%",
+                opacity: 0.8,
+                display: "block",
+                borderTopRightRadius: "5.77px",
+              }}
+            />
+
+            {/* Overlay tint */}
             <div
               style={{
-                width: "765.9437255859375px",
-                height: "30.3px",
-                position: "relative",
-                left: "-190.14px",
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "95%",
+               // background: "rgba(217, 217, 217, 1)",
                 borderTopLeftRadius: "5.26px",
                 borderTopRightRadius: "5.26px",
-                borderBottomRightRadius: "14.72px",
-                borderBottomLeftRadius: "14.72px",
-                border: "1.05px solid transparent",
-                background:
-                  "linear-gradient(#02171F, #02171F) padding-box, linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%) border-box",
+                opacity: 0.15,
+                pointerEvents: "none",
               }}
             />
           </div>
 
-          {/* RIGHT — text content */}
-          <div>
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "rgba(37,99,235,0.12)",
-                border: "1px solid rgba(37,99,235,0.2)",
-                borderRadius: "20px",
-                padding: "6px 14px",
-                marginBottom: "24px",
-              }}
-            >
-              <span style={{ fontSize: "11px", color: "#60a5fa", fontWeight: 500 }}>
-                ⊞ Management System
-              </span>
-            </div>
-
-            <h2
-              style={{
-                fontFamily: "Archivo",
-                fontSize: "clamp(28px, 4vw, 44px)",
-                fontWeight: 700,
-                color: "#fff",
-                lineHeight: 1.2,
-                marginBottom: "18px",
-              }}
-            >
-              Run a more efficient, flexible and digitally connected core banking system
-            </h2>
-
-            <p
-              style={{
-                fontSize: "15px",
-                color: "rgba(255,255,255,0.55)",
-                lineHeight: 1.8,
-                marginBottom: "40px",
-              }}
-            >
-              N7's full capabilities across strategy, human-centered design philosophies,
-              engineering, delivering innovative products, automation.
-            </p>
-
-            <p
-              style={{
-                fontSize: "12px",
-                fontWeight: 600,
-                color: "rgba(255,255,255,0.5)",
-                textTransform: "uppercase",
-                marginBottom: "24px",
-              }}
-            >
-              What you get
-            </p>
-
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
-              <div>
-                {DASHBOARD_ROWS.map((item) => (
-                  <div key={item.label} style={{ display: "flex", gap: "10px", marginBottom: "18px" }}>
-                    <div
-                      style={{
-                        width: "10px", height: "10px", borderRadius: "50%",
-                        background: "linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%)",
-                        marginTop: "6px", flexShrink: 0,
-                      }}
-                    />
-                    <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "14px", margin: 0 }}>
-                      {item.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div>
-                {FEATURES_RIGHT.map((item) => (
-                  <div key={item.label} style={{ display: "flex", gap: "10px", marginBottom: "18px" }}>
-                    <div
-                      style={{
-                        width: "10px", height: "10px", borderRadius: "50%",
-                        background: "linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%)",
-                        marginTop: "6px", flexShrink: 0,
-                      }}
-                    />
-                    <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "14px", margin: 0 }}>
-                      {item.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          {/* Bottom bar */}
+          <div
+            style={{
+              width: "765.9437255859375px",
+              height: "30.3px",
+              position: "relative",
+              left:"-57.14px",
+              borderTopLeftRadius: "5.26px",
+              borderTopRightRadius: "5.26px",
+              borderBottomRightRadius: "14.72px",
+              borderBottomLeftRadius: "14.72px",
+              border: "1.05px solid transparent",
+              background:
+                "linear-gradient(#02171F, #02171F) padding-box, linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%) border-box",
+            }}
+          />
         </div>
+
+
       </section>
     </>
   );
