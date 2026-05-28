@@ -37,82 +37,88 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "flex-start",
-      width: 1440,
-      minHeight: 1177,
-      opacity: 1,
-      background: "rgba(0, 13, 18, 1)",
-
-      padding: "100px 80px",
-      gap: "80px",
-      position: "relative",
-    }}
+    <section
+      style={{
+        width: "1440px",
+        minHeight: "1250px",
+        background: "rgba(0, 13, 18, 1)",
+        position: "relative",
+        overflow: "hidden",
+      }}
     >
+      {/* Blur Background */}
+      <div
+        style={{
+          width: "556.7720947265625px",
+          height: "556.7720947265625px",
+          borderRadius: "50%",
+          opacity: 0.1,
+          background:
+            "linear-gradient(103.43deg, #00B4FD -1.02%, #003ACE 83.53%)",
+          filter: "blur(200px)",
+          position: "absolute",
+          top: "447.5px",
+          left: "968.64px",
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      />
 
       {/* Header */}
       <div
         style={{
+          position: "absolute",
+          top: "47.09px",
+          left: "80px",
           display: "flex",
           flexDirection: "column",
-          width: "433px",
-          height: "185px",
-          opacity: 1,
+          minWidth: "433px",
+          width: "auto",
+          height: "fit-content",
+          minHeight: "185px",
           gap: "48px",
+          zIndex: 2,
         }}
       >
         <h2
           style={{
             width: "433px",
             height: "88px",
-
-            opacity: 1,
-            transform: "rotate(0deg)",
-
             fontFamily: "Archivo, sans-serif",
             fontWeight: 400,
-            fontStyle: "normal",
-
             fontSize: "37px",
             lineHeight: "120%",
             letterSpacing: "-1%",
-
             color: "rgba(233, 244, 249, 1)",
-
             margin: 0,
           }}
         >
           All of our solutions are tailor-made to your needs
         </h2>
 
-        <button
-        className="secondaryButton"
-        
-        >
+        <button className="secondaryButton">
           Request Demo
         </button>
       </div>
 
-      {/* Cards grid */}
+      {/* Cards Grid */}
       <div
         style={{
+          position: "absolute",
+          left: "730px",
+          top: "47.09px",
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
           width: "613px",
           height: "1085px",
           gap: "76px",
-          opacity: 1,
-          // border: "1px solid rgba(255,255,255,0.06)",
           borderRadius: "16px",
-          //overflow: "hidden",
           alignItems: "stretch",
           justifyItems: "stretch",
+          zIndex: 2,
         }}
       >
-
-        {solutions.map((s, i) => (
+        {solutions.map((s) => (
           <div
             key={s.title}
             style={{
@@ -121,58 +127,57 @@ export default function Solutions() {
               display: "flex",
               flexDirection: "column",
               gap: "26px",
-              border: "1px solid rgba(255,255,255,0.06)",
-              borderRadius: "16px",
               position: "relative",
-              opacity: 1,
               cursor: "pointer",
+              
             }}
           >
             {/* Icon */}
-            <Image src={s.icon} alt="frame26" style={{
-              width: "47px", height: "49px",
-              borderRadius: "10px",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontSize: "20px", marginBottom: "20px"
-            }} />
-            <div style={{
-              width: "fit-content",
-              height: "fit-content",
-              display: "flex",
-              flexDirection: "column",
-              gap: "32px",
-              opacity: 1,
-            }}>
+            <Image
+              src={s.icon}
+              alt={s.title}
+              style={{
+                width: "47px",
+                height: "49px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            />
+
+            {/* Content */}
+            <div
+              style={{
+                width: "fit-content",
+                height: "fit-content",
+                display: "flex",
+                flexDirection: "column",
+                gap: "32px",
+              }}
+            >
               <h3
                 style={{
                   width: "263.718px",
-                  height: "26px",
-                  opacity: 1,
                   fontFamily: "Archivo",
                   fontWeight: 400,
-                  fontStyle: "normal",
                   fontSize: "22px",
                   lineHeight: "120%",
-                  letterSpacing: "0%",
                   color: "rgba(233, 244, 249, 1)",
                   margin: 0,
                 }}
               >
                 {s.title}
               </h3>
+
               <p
                 style={{
                   width: "268.506px",
-                  height: "147px",
-
                   opacity: 0.7,
-
                   fontFamily: "Archivo",
                   fontWeight: 400,
-                  fontStyle: "normal",
                   fontSize: "16px",
                   lineHeight: "130%",
-                  letterSpacing: "0%",
                   color: "rgba(233, 244, 249, 1)",
                   margin: 0,
                 }}
@@ -181,34 +186,48 @@ export default function Solutions() {
               </p>
             </div>
 
-           <a href="#" className="link-blue">
-  {/* Text + Icon */}
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      gap: "5px",
-    }}
-  >
-    <span
-      style={{
-        fontFamily: '"Chivo Mono Medium", monospace',
-        fontWeight: 400,
-        fontSize: "14px",
-        lineHeight: "130%",
-        textTransform: "uppercase",
-        color: "rgba(0, 180, 253, 1)",
-      }}
-    >
-      Learn More
-    </span>
+            {/* Link */}
+            <a
+              href="#"
+              className="link-blue"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "3px",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+            >
+              {/* Text + Icon */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: '"Chivo Mono", monospace',
+                    fontWeight: 400,
+                    fontSize: "14px",
+                    lineHeight: "130%",
+                    textTransform: "uppercase",
+                    color: "rgba(0, 180, 253, 1)",
+                  }}
+                >
+                  Learn More
+                </span>
 
-    <ArrowRight size={12} color="rgba(0, 180, 253, 1)" />
-  </div>
+                <ArrowRight
+                  size={12}
+                  color="rgba(0, 180, 253, 1)"
+                />
+              </div>
 
-  {/* Animated Line */}
-  <div className="hoverLine" />
-</a>
+              {/* Animated Line */}
+              <div className="hoverLine" />
+            </a>
           </div>
         ))}
       </div>
