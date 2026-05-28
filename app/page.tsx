@@ -18,11 +18,12 @@ export default function Home() {
       <Hero />
       <Solutions />
       <CloudBanking />
-      <CTABanner />
+      <CTA />
+      
       <DigitalBanking />
       <Blog />
       <OurCaseStudies />
-      <CTA />
+      <CTABanner />
       <Footer />
     </main>
   );
