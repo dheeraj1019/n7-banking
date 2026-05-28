@@ -23,7 +23,7 @@ export default function CTA({ light }: CTABannerProps) {
                 left: "81px",
                 borderRadius: "27px",
                 background: "linear-gradient(99.21deg, #031E2A -12.22%, #000D12 59.26%)",
-                zIndex:1000
+              
 
             }}>
                 {/* Left — text */}
