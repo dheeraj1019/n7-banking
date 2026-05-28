@@ -214,3 +214,11 @@ body {
 @media (max-width: 768px) {
   .hero-gradient { background-size: 300% 300%; }
 }
+* {
+  scrollbar-width: none;       
+  -ms-overflow-style: none;     
+}
+
+*::-webkit-scrollbar {
+  display: none;                
+}

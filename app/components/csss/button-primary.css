@@ -65,21 +65,21 @@
 
   transform: translateY(-2px);
 }
-.navbarButton {
+.navbardiv{
   width: fit-content;
-  height: 30px;
-
+  min-width: 161px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  gap: 8px;
-
+  gap: 20px;
+  cursor: pointer;
+  opacity: 1;
+}
+.navbarButton {
   padding: 5px 37px;
-
   border-radius: 6px;
   border: 1px solid rgba(233, 244, 249, 1);
-
   background: transparent;
   color: #ffffff;
 
@@ -92,17 +92,15 @@
   white-space: nowrap;
 
   cursor: pointer;
-  opacity: 1;
-
   transition: all 0.3s ease;
 }
 
 .navbarButton:hover {
   background: rgba(233, 244, 249, 1);
   color: #003ace;
-
   transform: translateY(-2px);
 }
+
 .secondary-button {
   color: rgba(233, 244, 249, 1);
     
