@@ -129,7 +129,6 @@ export default function Solutions() {
               gap: "26px",
               position: "relative",
               cursor: "pointer",
-              
             }}
           >
             {/* Icon */}
@@ -231,6 +230,25 @@ export default function Solutions() {
           </div>
         ))}
       </div>
+        <div
+
+          style={{
+            
+            width: "556.7720947265625px",
+            height: "556.7720947265625px",
+            borderRadius: "50%",
+            opacity: 0.1,
+            background:
+              "linear-gradient(103.43deg, #00B4FD -1.02%, #003ACE 83.53%)",
+            filter: "blur(200px)",
+            position: "absolute",
+            top:"447.5px",
+            left:"968.64px",
+            zIndex: 1,
+            pointerEvents: "none",
+          }}
+        />
+
     </section>
   );
 }
